@@ -13,7 +13,7 @@ mongoose.set("strictQuery", false);
 
 
 
-mongoose.connect(process.env.MONGODB_URL).then(() => {
+mongoose.connect(process.env.MONGODB_URL||8080).then(() => {
     console.log(`Successfully Conected to Clinic Database`);
 }).catch((err) => {
     console.log("Error", err);
